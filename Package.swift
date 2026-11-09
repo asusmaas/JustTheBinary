@@ -4,18 +4,14 @@ import PackageDescription
 
 let package = Package(
   name: "OpenCV",
-  platforms: [
-    .macOS(.v15), .iOS(.v18), .macCatalyst(.v18)
-  ],
+  platforms: [.iOS(.v18)],
   products: [
-    .library(name: "OpenCV",
-             targets: ["OpenCV"]
-             ),
+    .library(name: "OpenCV", targets: ["OpenCV"])
   ],
   targets: [
-     .binaryTarget(name: "OpenCV",
-                  url: "https://github.com/r0ml/JustTheBinary/releases/download/5.0.5/OpenCV.xcframework.zip",
-                  checksum: "ae2ea15c24d8d3edce84c8c53aeb52dab44ac8c87784638fb3998730fccb4586"),
+    .binaryTarget(
+      name: "OpenCV",
+      url: "https://github.com/asusmaas/JustTheBinary/releases/download/4.12.1-slim/OpenCV.xcframework.zip",
+      checksum: "32ce4ef66b4773ce794dcd23a059cbaed5f3d445dadf86fde15bb6334886e2f3")
   ]
 )
-
